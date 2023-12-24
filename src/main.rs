@@ -19,11 +19,8 @@ fn main() {
 
     let codes = Associated::new();
 
-    println!("{:#?}", tree);
 
     codes.calculate(&tree, "");
-    let mut input: String = String::new();
-    std::io::stdin().read_line(&mut input).expect("could not read line !");
     println!("{:#?}", freqs);
     println!("{:#?}", codes.get());
 

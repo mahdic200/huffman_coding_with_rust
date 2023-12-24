@@ -76,11 +76,6 @@ pub fn make_tree(nodes: &mut Vec<Node>) -> Node {
         let left = Rc::new(nodes.remove(0));
         let right = Rc::new(nodes.remove(0));
 
-        println!("left: {:#?}, right: {:#?}", Rc::clone(&left).freq, Rc::clone(&right).freq);
-    
-        let mut input: String = String::new();
-        std::io::stdin().read_line(&mut input).expect("could not read line !");
-
         let new_node: Node = Node {
             freq: left.freq + right.freq,
             symbol: '\0',
